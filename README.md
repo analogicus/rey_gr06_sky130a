@@ -22,9 +22,15 @@ wulff
 | :----           |  :----:       |
 | Schematic       | design/REY_GR06_SKY130A/REY_GR06.sch |
 | Layout          | design/REY_GR06_SKY130A/REY_GR06.mag |
+| TT top level schematic | design/REY_GR06_SKY130A/tt_um_rey_gr06_analogicus.sch |
+| TT top level layout    | design/REY_GR06_SKY130A/tt_um_rey_gr06_analogicus.mag |
 
 
 # Signal interface
+
+The TinyTapeout top level ties `uio_oe[7:0]` low, drives `PWRUP_1V8` from
+`ui_in[0]` (with antenna diode) and puts `OSC_TEMP_1V8` on `uo_out[0]`. Pin
+positions match `tt_block_1x1_pg.def` from TinyTapeout tt-support-tools.
 
 
 | Signal       | Direction | Domain  | Description                               |
